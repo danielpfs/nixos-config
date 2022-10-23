@@ -9,6 +9,7 @@
     [
       ./hardware-configuration.nix # Include the results of the hardware scan.
       ./driver/nvidia.nix
+      ./xserver/xorg.nix
       ./desktop/gnome.nix
       ../program
       ../home
