@@ -15,7 +15,7 @@
   in
   {
     nixosConfigurations = {
-      laptop = nixosSystem {
+      os = nixosSystem {
         # specialArgs = { inherit inputs user location; };
         modules = [
           ./system

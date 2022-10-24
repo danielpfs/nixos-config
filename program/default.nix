@@ -1,16 +1,17 @@
 { pkgs, ... }:
 
 {
-  imports = 
-    [
-      ./nosql-workbench.nix
-    ];
+  imports = [
+    ./nosql-workbench.nix
+  ];
 
   environment.systemPackages = with pkgs; [
     # System
     libgtop
     lm_sensors
     pciutils
+    xclip
+    ventoy-bin
 
     # Personal
     (google-chrome.override {
@@ -18,9 +19,11 @@
         "--enable-features=WebUIDarkMode --force-dark-mode"
       ];
     })
+    firefox
     discord
-    xclip
     onlyoffice-bin
+    inkscape
+    gimp
 
     # Dev
     asdf-vm
